@@ -1,0 +1,167 @@
+.choose {
+  padding-top: 53px;
+  padding-bottom: 111px;
+
+  @media (max-width: 1200px) {
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+
+   @media (max-width: 880px) {
+    padding-top: 35px;
+    padding-bottom: 5px;
+  }
+
+}
+
+.choose__heading {
+  text-align: center;
+  margin-bottom: 58px;
+
+  @media (max-width: 1090px) {
+    margin-bottom: 35px;
+  }
+
+  @media (max-width: 815px) {
+    & > h2 {
+      font-size: 2rem;
+    }
+  }
+
+}
+
+.choose__row {
+  @extend %flex-stretch;
+
+  @media (max-width: 1090px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  @media (max-width: 624px) {
+    flex-direction: column;
+  }
+ 
+
+  & > .card-choose {
+    flex-basis: 25%;
+    flex-shrink: 1;
+    flex-grow: 1;
+
+    &:last-child {
+      @media (max-width: 1090px) {
+        margin-left: 0;
+        margin-bottom: 0;
+      }
+
+      @media (max-width: 880px) {
+        margin-left: 30px;
+        margin-bottom: 30px;
+      }
+
+      @media (max-width: 624px) {
+        margin-left: auto;
+      }
+      
+    }
+
+    &:nth-child(3) {
+      @media (max-width: 880px) {
+        margin-left: 0;
+      }
+      @media (max-width: 624px) {
+        margin-left: auto;
+      }
+    }
+
+    @media (max-width: 1090px) {
+     
+        margin-bottom: 30px;
+        max-width: 330px;
+        min-width: 260px;
+      
+    }
+
+    @media (max-width: 880px) {
+      flex-basis: 50%;
+     }
+
+    @media (max-width: 724px) {
+      max-width: 300px;
+    }
+
+    @media (max-width: 664px) {
+      max-width: 280px;
+    }
+
+    @media (max-width: 624px) {
+      max-width: 330px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+   }
+}
+
+.card-choose {
+  @extend %flex-vertical;
+  align-items: center;
+  text-align: center;
+
+  & + & {
+    margin-left: 35px;
+
+    @media (max-width: 624px) {
+      margin-left: auto;
+    }
+
+  }
+
+    
+}
+
+.card-choose__title {
+  font: {
+    weight: 700;
+    size: 1.75rem;
+  }
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  color: $dark;
+  margin-top: 15px;
+  margin-bottom: 2px;
+
+  @media (max-width: 815px) {
+    font-size: 1.4rem;
+  } 
+
+}
+
+.card-choose__text {
+  p {
+    letter-spacing: 1.15px;
+  }
+}
+
+.card-choose__icon {
+  & > * {
+    fill: $cyan;
+    fill-opacity: 1;
+    transition: fill 0.2s linear, fill-opacity 0.2s linear;
+  }
+
+  circle {
+    fill-opacity: 0.2;
+  }
+}
+
+.card-choose:hover {
+  .card-choose__icon > * {
+    fill: $white;
+  }
+
+  .card-choose__icon > circle {
+    fill: $orange;
+    fill-opacity: 1;
+  }
+}

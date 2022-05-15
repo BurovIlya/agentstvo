@@ -1,0 +1,132 @@
+.serve {
+  position: relative;
+  padding-top: 74px;
+  padding-bottom: 60px;
+
+  @media (max-width: 1200px) {
+    padding-top: 35px;
+    padding-bottom: 30px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -40%;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-color: $light-grey;
+
+    @media (max-width: 747px) {
+      top: 0;
+    }
+
+  }
+}
+
+.serve__heading {
+  text-align: center;
+  margin-bottom: 45px;
+
+  & > h2 {
+    margin-bottom: 10px;
+
+    @media (max-width: 747px) {
+      font-size: 2rem;
+    }
+
+  }
+}
+
+.serve__heading > p,
+.card-customer > p {
+  letter-spacing: 1.15px;
+}
+
+.serve__row {
+  @extend %flex-stretch;
+
+  @media (max-width: 747px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  } 
+
+  & > .card-customer {
+    flex-basis: 50%;
+    flex-shrink: 1;
+    flex-grow: 1;
+
+    @media (max-width: 747px) {
+      flex-basis: 100%;
+      max-width: 500px;
+    } 
+
+  }
+
+  & > .card-customer + .card-customer {
+    margin-left: 30px;
+
+    @media (max-width: 747px) {
+      margin-left: 0;
+      margin-top: 30px;
+    }
+    
+  }
+}
+
+.card-customer {
+  @extend %flex-vertical;
+  align-items: center;
+  text-align: center;
+  background-color: $white;
+  box-shadow: 0px 40px 52px -22px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  padding: 40px 88px;
+  transition: background-color 0.2s ease-in, color 0.2s ease-in;
+
+  @media (max-width: 1000px) {
+    padding: 40px 60px;
+  }
+
+  @media (max-width: 747px) {
+    padding: 40px;
+  }
+
+  &__icon {
+    fill: $orange;
+    transition: fill 0.2s ease-in;
+  }
+
+  .button {
+    background-color: $white;
+    color: $orange;
+  }
+
+  &:hover {
+    background-color: $orange;
+    color: $white;
+
+    .title {
+      color: $white;
+
+      @media (max-width: 747px) {
+        font-size: 2rem;
+      }
+
+    }
+
+    .card-customer__icon {
+      fill: $white;
+    }
+  }
+}
+
+.card-customer__title {
+  margin-top: 15px;
+}
+
+.card-customer__text {
+  margin-bottom: 25px;
+}

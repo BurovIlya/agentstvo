@@ -1,0 +1,173 @@
+.contacts {
+  position: relative;
+  padding-top: 200px;
+  padding-bottom: 55px;
+  background-image: url("../img/bg_footer.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $white;
+  overflow: hidden;
+
+  @media (max-width: 1090px) {
+    padding-top: 100px;
+    padding-bottom: 35px;
+    padding-left: 40px;
+  }
+
+  @media (max-width: 920px) {
+    padding-top: 50px;
+    padding-left: 15px;
+  }
+
+  @media (max-width: 671px) {
+    padding-top: 5px;
+    padding-bottom: 25px;
+  }
+
+  @media (max-width: 624px) {
+    padding-top: 0;
+    padding-left: 0;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 743px;
+    height: 743px;
+    bottom: auto;
+    right: 78px;
+    z-index: 5;
+    background-image: url("../img/oval_footer.svg");
+    background-repeat: no-repeat;
+    background-size: initial;
+
+    @media (max-width: 1140px) {
+      right: 30px;
+    } 
+
+    @media (max-width: 1090px) {
+      width: 520px;
+    height: 520px;
+    bottom: -260px;
+    background-size: contain;
+    } 
+
+    @media (max-width: 920px) {
+      width: 364px;
+      height: 364px;
+      bottom: -182px;
+    } 
+
+    @media (max-width: 719px) {
+      right: 0;
+    }
+
+    @media (max-width: 671px) {
+      background-image: none;
+    }
+
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 478px;
+    height: 547px;
+    top: 0;
+    right: 264px;
+    z-index: 10;
+    background-image: url("../img/woman.png");
+    background-repeat: no-repeat;
+    background-size: initial;
+
+    @media (max-width: 1140px) {
+      right: 160px;
+    } 
+
+    @media (max-width: 1090px) {
+      top: auto;
+      bottom: 0;
+      right: 120px;
+      width: 335px;
+      height: 383px;
+      background-size: contain;
+    } 
+
+    @media (max-width: 920px) {
+      width: 235px;
+      height: 268px;
+      right: 94px;
+    }
+
+    @media (max-width: 719px) {
+      right: 64px;
+    }
+
+    @media (max-width: 671px) {
+      right: 32px;
+    }
+
+    @media (max-width: 624px) {
+      width: 164px;
+      height: 188px;
+      right: 22px;
+    }
+
+    @media (max-width: 520px) {
+      background-image: none;
+    }
+
+  }
+}
+
+.contacts__info {
+  max-width: 360px;
+
+  @media (max-width: 624px) {
+    max-width: unset;
+  }
+
+  & > .button {
+    @media (max-width: 520px) {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 11;
+    }
+  }
+
+}
+
+.contacts__title {
+  margin-bottom: 15px;
+  color: $white;
+
+  @media (max-width: 920px) {
+    line-height: 1.25;
+    color: $dark;
+  }
+
+  @media (max-width: 520px) {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+}
+
+.contacts__text {
+  margin-bottom: 30px;
+  max-width: 342px;
+
+  @media (max-width: 920px) {
+    margin-bottom: 15px;
+  }
+
+  @media (max-width: 520px) {
+    max-width: unset;
+    text-align: justify;
+  }
+
+}
+

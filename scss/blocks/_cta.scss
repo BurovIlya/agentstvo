@@ -1,0 +1,143 @@
+.cta {
+  padding-top: 70px;
+  padding-bottom: 70px;
+
+  @media (max-width: 1200px) {
+    padding-top: 35px;
+  padding-bottom: 35px;
+  }
+
+}
+
+.cta__block {
+  @extend %flex-bacic;
+  align-items: stretch;
+  background-color: $cyan;
+  border-radius: 20px;
+  overflow: hidden;
+
+  @media (max-width: 878px) {
+    flex-wrap: wrap;
+    padding-bottom: 40px;
+  }
+
+  & > div {
+    flex-basis: 50%;
+    flex-shrink: 0;
+
+    @media (max-width: 878px) {
+      flex-basis: 100%;
+    }
+
+  }
+}
+
+.cta__img {
+  margin-top: 60px;
+  padding-top: 25px;
+  padding-right: 25px;
+  border-radius: 0 20px 0 0;
+  background-color: $white;
+  overflow: hidden;
+
+  @media (max-width: 878px) {
+    margin-top: 0;
+    padding-top: 0;
+    padding-right: 24px;
+    padding-left: 24px;
+    background-color: transparent;
+
+    & > img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+  }
+
+}
+
+.cta__text {
+  @extend %flex-vertical;
+  padding-left: 95px;
+  padding-right: 95px;
+  background-image: url("../img/oval1.svg"), url("../img/oval2.svg");
+  background-size: initial;
+  background-repeat: no-repeat;
+  background-position: top -103px right -79px, bottom -203px left -186px;
+  background-origin: border-box;
+
+  @media (max-width: 1139px) {
+    padding-left: 40px;
+  padding-right: 40px;
+  }
+
+  @media (max-width: 918px) {
+    padding-left: 30px;
+  padding-right: 30px;
+  }
+
+  @media (max-width: 878px) {
+    order: -1;
+    align-items: center;
+    padding: 40px 24px;
+    background-size: auto 50%;
+    background-position: top -40px right -30px, top -55px left -55px;
+  
+  }
+
+  @media (max-width: 476px) {
+    background: none;
+  }
+
+  & > p {
+    font-size: 16px;
+    line-height: 1.69;
+    letter-spacing: 1.15px;
+    color: $white;
+    margin-bottom: 30px;
+
+    @media (max-width: 878px) {
+      text-align: justify;
+    }
+
+  }
+}
+
+.cta__title {
+  font: {
+    weight: bold;
+    size: 2.625rem;
+  }
+  line-height: 1.48;
+  letter-spacing: 0.8px;
+  color: $white;
+  margin-bottom: 15px;
+
+  @media (max-width: 918px) {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+}
+
+.cta__buttons-row {
+  @extend %flex-bacic;
+  justify-content: flex-start;
+
+  @media (max-width: 442px) {
+    flex-direction: column;
+    align-items: initial;
+
+  } 
+
+  & > * + * {
+    margin-left: 20px;
+
+    @media (max-width: 442px) {
+      margin-left: 0;
+      margin-top: 20px;
+    }
+
+  }
+}
